@@ -1,0 +1,16 @@
+server:
+    port: 9998
+spring:
+    application:
+        name: security
+    redis:
+        host: 127.0.0.1
+        port: 6379
+        password: "2wsx#EDC"
+        timeout: 20000
+        database: 0
+        lettuce:
+            pool:
+                max-idle: 8
+                max-active: 10
+                min-idle: 0
