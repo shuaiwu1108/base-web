@@ -11,8 +11,6 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("api")
 public class ApiController {
 
-    @Autowired
-    private RestTemplate restTemplate;
 
     @GetMapping("hello")
     public String hello(){
