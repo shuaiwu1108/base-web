@@ -38,7 +38,7 @@ public class OauthClientDetailsController {
      * @param params
      * @return
      */
-    @Operation(summary = "注册新的client、secret")
+    @Operation(summary = "注册")
     @Parameters(value = {
         @Parameter(name = "time", description = "AccessToken的超时时间", example = "7200"),
         @Parameter(name = "timeRefresh", description = "RefreshToken的超时时间", example = "7200")
