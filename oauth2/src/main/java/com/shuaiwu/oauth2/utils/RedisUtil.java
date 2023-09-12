@@ -1,4 +1,4 @@
-package com.shuaiwu.oauth.utils;
+package com.shuaiwu.oauth2.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Collection;

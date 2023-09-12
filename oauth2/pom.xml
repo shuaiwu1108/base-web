@@ -11,11 +11,15 @@
   <artifactId>oauth2</artifactId>
 
   <properties>
-    <spring.security.oauth.version>2.7.15</spring.security.oauth.version>
+    <spring.security.version>3.0.4</spring.security.version>
+    <spring.security.oauth.version>2.5.2.RELEASE</spring.security.oauth.version>
+    <spring.security.oauth.configuration.version>2.6.8</spring.security.oauth.configuration.version>
     <fastjson.version>1.2.60</fastjson.version>
-    <druid.version>1.1.10</druid.version>
+    <druid.version>1.2.16</druid.version>
     <mybatis.version>3.5.3.1</mybatis.version>
     <log4j.version>1.2.17</log4j.version>
+    <springdoc-openapi-ui.version>1.6.15</springdoc-openapi-ui.version>
+    <knife4j-springdoc-ui.version>3.0.3</knife4j-springdoc-ui.version>
   </properties>
 
   <dependencies>
@@ -70,26 +74,41 @@
       <artifactId>mysql-connector-j</artifactId>
     </dependency>
 
-    <!-- springboot security + oauth2 -->
-    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
+    <!-- springboot +security + oauth2 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
-      <version>${spring.security.oauth.version}</version>
+      <version>${spring.security.version}</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
     <dependency>
       <groupId>org.springframework.security.oauth</groupId>
       <artifactId>spring-security-oauth2</artifactId>
-      <version>2.5.2.RELEASE</version>
+      <version>${spring.security.oauth.version}</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework.security.oauth.boot/spring-security-oauth2-autoconfigure -->
     <dependency>
       <groupId>org.springframework.security.oauth.boot</groupId>
       <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-      <version>2.5.2</version>
+      <version>${spring.security.oauth.configuration.version}</version>
     </dependency>
 
+    <!-- API文档， springdoc + knife4j -->
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-ui</artifactId>
+      <version>${springdoc-openapi-ui.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.xiaoymin</groupId>
+      <artifactId>knife4j-springdoc-ui</artifactId>
+      <version>${knife4j-springdoc-ui.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>net.logstash.logback</groupId>
+      <artifactId>logstash-logback-encoder</artifactId>
+      <version>6.1</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
